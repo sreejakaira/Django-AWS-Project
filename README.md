@@ -95,6 +95,61 @@ todoproject/
    ```
    sudo systemctl restart nginx
    ```
+Deploying Django Project on AWS EC2 (13.60.253.71)
+Follow these exact steps to clone, set up, and run the Django project on your AWS EC2 instance (13.60.253.71):
+
+✅ 1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME/project
+🌐 2. Set Allowed Hosts
+Set ALLOWED_HOSTS so Django can serve requests from your public IP:
+
+bash
+Copy
+Edit
+export ALLOWED_HOSTS='localhost,127.0.0.1,13.60.253.71'
+🐍 3. Set Up Python Virtual Environment
+bash
+Copy
+Edit
+python3 -m venv venv
+source venv/bin/activate
+📦 4. Install Dependencies
+bash
+Copy
+Edit
+pip install django
+Optionally add other dependencies and freeze with pip freeze > requirements.txt.
+
+🛠 5. Run Migrations
+bash
+Copy
+Edit
+python3 manage.py migrate
+🔥 6. Start Django Server
+bash
+Copy
+Edit
+python3 manage.py runserver 0.0.0.0:8000
+Django will be available at:
+http://13.60.253.71:8000
+
+🔓 7. AWS Security Group Configuration
+Make sure your EC2 instance's security group allows inbound traffic:
+
+Type	Protocol	Port Range	Source
+HTTP	TCP	8000	0.0.0.0/0
+SSH	TCP	22	YOUR_IP/32
+
+
+
+
+
+
+
 
 ## License
 
