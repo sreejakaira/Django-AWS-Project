@@ -104,9 +104,7 @@ todoproject/
 Default Admin Credentials
 Use the following credentials to log into the Django admin panel at /admin:
 
-makefile
-Copy
-Edit
+
 Username: sreeja  
 Password: sreeja@06
 
