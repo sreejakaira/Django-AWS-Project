@@ -95,54 +95,74 @@ todoproject/
    ```
    sudo systemctl restart nginx
    ```
-Deploying Django Project on AWS EC2 (13.60.253.71)
-Follow these exact steps to clone, set up, and run the Django project on your AWS EC2 instance (13.60.253.71):
 
-✅ 1. Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME/project
-🌐 2. Set Allowed Hosts
-Set ALLOWED_HOSTS so Django can serve requests from your public IP:
+## 🌍 Live Server
 
-bash
-Copy
-Edit
+**URL:** [http://13.60.253.71:8000](http://13.60.253.71:8000)
+
+---
+
+## ⚙️ Setup Instructions (AWS EC2)
+
+Follow these steps on your AWS EC2 instance to clone and run the project.
+
+---
+
+### 1. 🚀 Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/Django-AWS-Project.git
+cd Django-AWS-Project/project
+2. 🌐 Configure Allowed Hosts
+Set your server's IP in ALLOWED_HOSTS:
+
+
 export ALLOWED_HOSTS='localhost,127.0.0.1,13.60.253.71'
-🐍 3. Set Up Python Virtual Environment
-bash
-Copy
-Edit
+3. 🐍 Create & Activate Virtual Environment
+
 python3 -m venv venv
 source venv/bin/activate
-📦 4. Install Dependencies
-bash
-Copy
-Edit
+4. 📦 Install Dependencies
+
 pip install django
-Optionally add other dependencies and freeze with pip freeze > requirements.txt.
+Optionally:
+pip freeze > requirements.txt
+To restore: pip install -r requirements.txt
 
-🛠 5. Run Migrations
-bash
-Copy
-Edit
+5. 🛠 Run Migrations
+
 python3 manage.py migrate
-🔥 6. Start Django Server
-bash
-Copy
-Edit
+6. 🔥 Start the Server
+
 python3 manage.py runserver 0.0.0.0:8000
-Django will be available at:
-http://13.60.253.71:8000
+Access from browser: http://13.60.253.71:8000
 
-🔓 7. AWS Security Group Configuration
-Make sure your EC2 instance's security group allows inbound traffic:
+🔐 AWS EC2 Security Group Settings
+Ensure your EC2 instance allows inbound traffic on port 8000:
 
-Type	Protocol	Port Range	Source
+Type	Protocol	Port	Source
 HTTP	TCP	8000	0.0.0.0/0
-SSH	TCP	22	YOUR_IP/32
+SSH	TCP	22	Your IP only
+
+✅ To-Do App Features
+Add, update, and delete tasks
+
+Track task completion
+
+Clean UI with Django admin
+
+💡 Next Steps
+ Add Gunicorn & Nginx for production
+
+ Enable HTTPS with Let's Encrypt
+
+ Connect PostgreSQL
+
+ Deploy via CI/CD
+
+🧑‍💻 Author
+@sreejakaira
+Pull requests and suggestions are welcome!
 
 
 
