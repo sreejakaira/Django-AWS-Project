@@ -1,0 +1,40 @@
+{% extends 'todoapp/base.html' %}
+
+{% block title %}Delete Todo{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card border-danger shadow-sm">
+            <div class="card-header bg-danger text-white">
+                <h2 class="h5 mb-0">Delete Todo</h2>
+            </div>
+            <div class="card-body">
+                <p class="mb-3">Are you sure you want to delete the following todo?</p>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ todo.title }}</h5>
+                        {% if todo.description %}
+                            <p class="card-text">{{ todo.description }}</p>
+                        {% endif %}
+                        <p class="card-text">
+                            <small class="text-muted">Created: {{ todo.created_at|date:"M d, Y" }}</small>
+                            {% if todo.due_date %}
+                                <br>
+                                <small class="text-muted">Due: {{ todo.due_date|date:"M d, Y" }}</small>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'todo_list' %}" class="btn btn-outline-secondary">Cancel</a>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
