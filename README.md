@@ -98,7 +98,7 @@ todoproject/
 
 ## 🌍 Live Server
 
-**URL:** [http://13.60.253.71:8000](http://13.60.253.71:8000)
+**URL:** [http://13.51.80.178:8000](http://13.51.80.178:8000)
 
 
 Default Admin Credentials
