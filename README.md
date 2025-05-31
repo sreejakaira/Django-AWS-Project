@@ -100,6 +100,16 @@ todoproject/
 
 **URL:** [http://13.60.253.71:8000](http://13.60.253.71:8000)
 
+
+Default Admin Credentials
+Use the following credentials to log into the Django admin panel at /admin:
+
+makefile
+Copy
+Edit
+Username: sreeja  
+Password: sreeja@06
+
 ---
 
 ## ⚙️ Setup Instructions (AWS EC2)
