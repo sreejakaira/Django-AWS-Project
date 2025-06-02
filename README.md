@@ -173,6 +173,8 @@ Clean UI with Django admin
 Pull requests and suggestions are welcome!
 
 
+Outout Video:
+ [![Watch the Demo](./assets/demo-thumbnail.png)](https://drive.google.com/file/d/1F2C-k9zL1Zd7gFhOwg4hObtgLNuPHOgL/view?usp=sharing)
 
 
 
