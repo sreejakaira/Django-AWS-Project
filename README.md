@@ -185,4 +185,5 @@ Pull requests and suggestions are welcome!
 This project is open-source, feel free to use it for learning purposes.
 
 Output Video:
- [![Watch the Demo](./assets/demo-thumbnail.png)](https://drive.google.com/file/d/1F2C-k9zL1Zd7gFhOwg4hObtgLNuPHOgL/view?usp=sharing)
+ 📽️ [Watch Demo Video](https://drive.google.com/file/d/1F2C-k9zL1Zd7gFhOwg4hObtgLNuPHOgL/view?usp=sharing)
+
