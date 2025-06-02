@@ -51,9 +51,7 @@ todoproject/
 ├── todo_form.html
 └── todo_list.html
 
-bash
-Copy
-Edit
+
 
 ## Local Development
 
@@ -89,9 +87,7 @@ Username: sreeja
 Password: sreeja@06
 
 ⚙️ AWS EC2 Deployment
-bash
-Copy
-Edit
+
 # 1. SSH into your instance
 ssh -i your-key.pem ubuntu@<EC2-IP>
 
